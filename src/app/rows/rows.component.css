@@ -1,0 +1,57 @@
+.box{
+    width: 70%;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    padding: 20px 20px 20px 20px;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    margin: auto;
+    padding: auto;
+}
+
+.field {
+    padding-top: 10px;
+}
+
+.field-header{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.field-input{
+    width: 100%;
+    font-size: 20px;
+    color: cyan;
+}
+
+  .btn:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .btn:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .btn:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+
+.btn{
+    width: 100%;
+    font-size: 20px;
+    margin-top: 5px;
+    color:deeppink
+}
+
+@media screen and (max-width:500px){
+    .box{
+        width: 90%;
+    }
+} 

@@ -1,0 +1,126 @@
+<div class="card">
+    <h1 class="box" >To Do List</h1>
+    <form [formGroup]="items">
+        <div class="box">
+            <div class="form-row">
+
+                <div class="field">
+                    <div class="field-header">
+                        <label>Title</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input 
+                                type="text"
+                                formControlName="title"
+                                class='field-input'
+                                placeholder="Title...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="field-header">
+                        <label>Description</label>
+                    </div>
+                    <div class="form-row" >
+                        <div class="col">
+                            <input 
+                                type="text"
+                                formControlName="description"
+                                class='field-input'
+                                placeholder="Description...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="field-header">
+                        <label>Deadline</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input 
+                                type="date"
+                                formControlName="deadline"
+                                class='field-input'
+                                placeholder="Deadline...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="field-header">
+                        <label>Tags</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input 
+                                type="text"
+                                formControlName="tags"
+                                class='field-input'
+                                placeholder="Tags...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row mt-4"></div>
+                    <div class="col-6">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            (click)="addItem()"
+                            >Create To Do Item</button>
+
+                            </div>
+                            <div class="col-6">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            (click)="reset()"
+                            >Reset</button>
+                        <button
+                            type="button"
+                            class="btn btn-title"
+                            (click)="sortTitle()"
+                            >Sort by Title</button>
+                        <button
+                            type="button"
+                            class="btn btn-date"
+                            (click)="sortDate()"
+                            >Sort by Date</button>
+                    </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="box">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Deadline</th>
+                    <th>Tags</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr 
+                    class="todo-item"
+                    *ngFor="let item of listData">
+                    <td><span>{{item.title}}</span></td>
+                    <td><span>{{item.description}}</span></td>
+                    <td><span>{{item.deadline}}</span></td>
+                    <td><span>{{item.tags}}</span></td>
+                    <br>
+                    <td><button 
+                        type="button" 
+                        class="btn btn-primary"
+                        (click)="removeItem()"
+                        >Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
