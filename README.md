@@ -1,7 +1,7 @@
 
 This app is designed to create a to-do list, adding tasks by typing them into the input fields and submitting them by clicking a button.
 
-You may start the app by accessing 
+You may start the app by accessing "https://greatest-to-do-ever.netlify.app" on your web browser
 
 There are 4 input fields for the item's title, description, due-date and tags attributes.
 
